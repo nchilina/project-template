@@ -21,18 +21,20 @@ dist
 ```
  
  `.editorconfig` creates list of settings for code editing http://editorconfig.org/
- ```
- root = true
+```
+root = true
  
- [*]
- indent_style = space
- indent_size = 2
- charset = utf-8
- trim_trailing_whitespace = true
- insert_final_newline = true
- ```
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
+
 Git Set Up
-----------------------
+----------
+
 `git add --all` to add all files to Git
 or `git add file1 file2 file3..`
 
@@ -42,4 +44,22 @@ Login to GitHub and create repository for the project 'Project-Template' then fo
 ```
 git remote add origin git@github.com:nchilina/project-template.git
 git push -u origin master
+```
+
+Directories structure
+---------------------
+```
+.
+├── package.json
+├── readme.md
+└── src
+    ├── app
+    │   ├── main.html
+    │   ├── main.spec.js
+    │   └── main.js
+    ├── index.html
+    ├── index.css
+    ├── index.spec.js
+    ├── index.js
+    └── routes.js
 ```
