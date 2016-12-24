@@ -33,6 +33,12 @@ dist
  ```
 Git Set Up
 ----------------------
+`git add --all` to add all files to Git
+or `git add file1 file2 file3..`
+
+then ` git commit -m "...comment..."`
+
+Login to GitHub and create repository for the project 'Project-Template' then follow instructions from GitHub.
 ```
 git remote add origin git@github.com:nchilina/project-template.git
 git push -u origin master
