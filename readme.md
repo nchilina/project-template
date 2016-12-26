@@ -43,3 +43,8 @@ Login to GitHub and create repository for the project 'Project-Template' then fo
 git remote add origin git@github.com:nchilina/project-template.git
 git push -u origin master
 ```
+Dependencies
+------------
+`npm install --save angular`
+
+
