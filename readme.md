@@ -100,3 +100,55 @@ npm install --save-dev browser-sync webpack
   }
 }
 ```
+Webpack set up
+--------------
+http://webpack.github.io/docs/usage.html
+
+Create `webpack.config.js` file.
+Put inside:
+```json
+module.exports={
+  entry: './src/index.js',
+  output: {
+    path: './dist',
+    filename: 'index.bundle.js'
+  }
+};
+```
+
+Browser-sync set up
+-------------------
+https://browsersync.io/
+
+https://browsersync.io/docs/options
+
+Create `bs-config.js` file.
+
+Put inside:
+```json
+module.exports = {
+  "files": "src/index.html, src/index.css, dist/**",
+  "server": ["dist", "src"]
+};
+```
+
+to start:
+```
+browser-sync start -c bs-config.js
+```
+
+
+NPM scripts
+-----------
+
+add to `package.json`:
+```json
+{
+  "scripts": {
+    "script": "webpack",
+    "serve": "browser-sync start -c bs-config.js",
+    "clean": "rm -rf dist"
+  }
+}
+```
+
