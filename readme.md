@@ -46,8 +46,6 @@ git remote add origin git@github.com:nchilina/project-template.git
 git push -u origin master
 ```
 
-
-
 Directories structure
 ---------------------
 ```
@@ -68,4 +66,37 @@ Directories structure
 
 Dependencies
 ------------
-`npm install --save angular`
+
+Application dependencies
+```bash
+npm install --save angular
+```
+
+Dev dependencies
+```bash
+npm install --save-dev browser-sync webpack
+
+```
+
+`package.json` after dependencies installation
+
+```json
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "webpack": "^1.14.0"
+  }
+}
+```

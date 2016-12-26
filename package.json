@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "webpack": "^1.14.0"
   }
 }
