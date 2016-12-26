@@ -106,7 +106,7 @@ http://webpack.github.io/docs/usage.html
 
 Create `webpack.config.js` file.
 Put inside:
-```json
+```js
 module.exports={
   entry: './src/index.js',
   output: {
@@ -125,7 +125,7 @@ https://browsersync.io/docs/options
 Create `bs-config.js` file.
 
 Put inside:
-```json
+```js
 module.exports = {
   "files": "src/index.html, src/index.css, dist/**",
   "server": ["dist", "src"]
