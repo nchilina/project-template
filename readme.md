@@ -186,6 +186,10 @@ gulp.task('webpack', function() {
         version: true
       }));
   };
-  webpackBundler.run(webpackChangeHandler);
+ //webpackBundler.run(webpackChangeHandler);
+   webpackBundler.watch(200, webpackChangeHandler);
 ```
+Method .run() starts webpack only once.
 
+For development one should use .watch() method since it keeps starting
+.run() method whenever there is any change in files.

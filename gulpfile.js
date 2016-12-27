@@ -20,5 +20,6 @@ gulp.task('webpack', function() {
         version: true
       }));
   };
-  webpackBundler.run(webpackChangeHandler);
+  //webpackBundler.run(webpackChangeHandler);
+  webpackBundler.watch(200, webpackChangeHandler);
 });
