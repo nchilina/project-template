@@ -145,10 +145,16 @@ add to `package.json`:
 ```json
 {
   "scripts": {
-    "script": "webpack",
+    "webpack": "webpack",
     "serve": "browser-sync start -c bs-config.js",
     "clean": "rm -rf dist"
   }
 }
 ```
 
+To run webpack and browser-sync use these commands:
+```
+npm run webpack
+npm run serve
+
+```
