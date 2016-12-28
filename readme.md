@@ -193,3 +193,37 @@ Method .run() starts webpack only once.
 
 For development one should use .watch() method since it keeps starting
 .run() method whenever there is any change in files.
+
+Gulp browsersync
+----------------
+to add browsersync task to Gulp add this code to gulpfile.js:
+```
+gulp.task('browsersync', function(done) {
+  browsersync.init(browsersyncConf);
+  done();
+});
+```
+To initiate autoreload after changes the webpack task should be updated. 
+The line `browsersync.reload();` should be added
+` 
+
+```javascript
+gulp.task('webpack', function() {
+  var webpackBundler = webpack(webpackConf);
+  var webpackChangeHandler = function(err, stats) {
+    if(err) {
+      gutil.log('[Webpack] Error:', err);
+    }
+    gutil.log('[Webpack]', stats.toString({
+        colors:true,
+        hash: false,
+        chunks: false,
+        version: true
+      }));
+    browsersync.reload(); // <----------------------
+  };
+  //webpackBundler.run(webpackChangeHandler);
+  webpackBundler.watch(200, webpackChangeHandler);
+
+  });
+```

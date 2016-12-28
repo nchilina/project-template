@@ -4,8 +4,10 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
+var browsersync = require('browser-sync');
 
 var webpackConf = require('./webpack.config');
+var browsersyncConf = require('./bs-config');
 
 gulp.task('webpack', function() {
   var webpackBundler = webpack(webpackConf);
@@ -19,7 +21,16 @@ gulp.task('webpack', function() {
         chunks: false,
         version: true
       }));
+    browsersync.reload();
   };
   //webpackBundler.run(webpackChangeHandler);
   webpackBundler.watch(200, webpackChangeHandler);
+
+  });
+
+gulp.task('browsersync', function(done) {
+  browsersync.init(browsersyncConf);
+  done();
 });
+
+gulp.task('serve', ['webpack', 'browsersync']);
